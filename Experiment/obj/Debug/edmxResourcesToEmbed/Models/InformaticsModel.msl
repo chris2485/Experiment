@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="db_informaticsModelStoreContainer" CdmEntityContainer="db_informaticsEntities">
+    <EntitySetMapping Name="about_information">
+      <EntityTypeMapping TypeName="db_informaticsModel.about_information">
+        <MappingFragment StoreEntitySet="about_information">
+          <ScalarProperty Name="about_id" ColumnName="about_id" />
+          <ScalarProperty Name="imageDirectory" ColumnName="imageDirectory" />
+          <ScalarProperty Name="background_color" ColumnName="background_color" />
+          <ScalarProperty Name="type" ColumnName="type" />
+          <ScalarProperty Name="title_color" ColumnName="title_color" />
+          <ScalarProperty Name="title" ColumnName="title" />
+          <ScalarProperty Name="paragraphs_color" ColumnName="paragraphs_color" />
+          <ScalarProperty Name="paragraphs" ColumnName="paragraphs" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="applicant_information">
+      <EntityTypeMapping TypeName="db_informaticsModel.applicant_information">
+        <MappingFragment StoreEntitySet="applicant_information">
+          <ScalarProperty Name="applicant_id" ColumnName="applicant_id" />
+          <ScalarProperty Name="branch_id" ColumnName="branch_id" />
+          <ScalarProperty Name="course_id" ColumnName="course_id" />
+          <ScalarProperty Name="prefix" ColumnName="prefix" />
+          <ScalarProperty Name="gender" ColumnName="gender" />
+          <ScalarProperty Name="firstname" ColumnName="firstname" />
+          <ScalarProperty Name="middlename" ColumnName="middlename" />
+          <ScalarProperty Name="lastname" ColumnName="lastname" />
+          <ScalarProperty Name="telephone" ColumnName="telephone" />
+          <ScalarProperty Name="mobile" ColumnName="mobile" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="address" ColumnName="address" />
+          <ScalarProperty Name="hea" ColumnName="hea" />
+          <ScalarProperty Name="lsa" ColumnName="lsa" />
+          <ScalarProperty Name="sa" ColumnName="sa" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="branch_course">
+      <EntityTypeMapping TypeName="db_informaticsModel.branch_course">
+        <MappingFragment StoreEntitySet="branch_course">
+          <ScalarProperty Name="branch_course_id" ColumnName="branch_course_id" />
+          <ScalarProperty Name="branch_id" ColumnName="branch_id" />
+          <ScalarProperty Name="course_id" ColumnName="course_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="branch_information">
+      <EntityTypeMapping TypeName="db_informaticsModel.branch_information">
+        <MappingFragment StoreEntitySet="branch_information">
+          <ScalarProperty Name="branch_id" ColumnName="branch_id" />
+          <ScalarProperty Name="branch" ColumnName="branch" />
+          <ScalarProperty Name="college" ColumnName="college" />
+          <ScalarProperty Name="address" ColumnName="address" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="course_information">
+      <EntityTypeMapping TypeName="db_informaticsModel.course_information">
+        <MappingFragment StoreEntitySet="course_information">
+          <ScalarProperty Name="course_id" ColumnName="course_id" />
+          <ScalarProperty Name="course_name" ColumnName="course_name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="slider_information">
+      <EntityTypeMapping TypeName="db_informaticsModel.slider_information">
+        <MappingFragment StoreEntitySet="slider_information">
+          <ScalarProperty Name="slider_id" ColumnName="slider_id" />
+          <ScalarProperty Name="imageDirectory" ColumnName="imageDirectory" />
+          <ScalarProperty Name="title" ColumnName="title" />
+          <ScalarProperty Name="paragraph" ColumnName="paragraph" />
+          <ScalarProperty Name="button" ColumnName="button" />
+          <ScalarProperty Name="class_name" ColumnName="class_name" />
+          <ScalarProperty Name="url" ColumnName="url" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="staff_information">
+      <EntityTypeMapping TypeName="db_informaticsModel.staff_information">
+        <MappingFragment StoreEntitySet="staff_information">
+          <ScalarProperty Name="staff_id" ColumnName="staff_id" />
+          <ScalarProperty Name="imageDirectory" ColumnName="imageDirectory" />
+          <ScalarProperty Name="prefix" ColumnName="prefix" />
+          <ScalarProperty Name="gender" ColumnName="gender" />
+          <ScalarProperty Name="firstname" ColumnName="firstname" />
+          <ScalarProperty Name="middlename" ColumnName="middlename" />
+          <ScalarProperty Name="lastname" ColumnName="lastname" />
+          <ScalarProperty Name="position" ColumnName="position" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

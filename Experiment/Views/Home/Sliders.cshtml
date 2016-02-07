@@ -1,0 +1,187 @@
+﻿@model Experiment.Models.Home.SlidersModel
+
+<div class="lx_side_panel">
+    <div class="title">
+        <a href="@Url.Action("Index")"><img src="@Url.Content("~/Content/images/informatics.png")" /></a>
+    </div>
+    <div class="content">
+        <div class="why_who">
+            <h1>WHY<br /><span>INFORMATICS?</span></h1>
+            <p class="paragraph">Informatics Philippines is the leading international provider of ICT training and education in the Philippines, since 1994. Informatics Philippines offers corporate productivity, business solutions, higher education from undergraduate to postgraduate...</p>
+            <p style="text-align: right; margin-top: 10px"><button class="button" id="why_b">READ MORE</button></p>
+        </div>
+
+        <div class="why_who">
+            <h1>WHO ARE<br /><span>INFORMATICS?</span></h1>
+            <p class="paragraph">People who go to Informatics are SHS, BS, foreign-exchange students, game designers, animators, mobile and wed developers; people who train for office skills, call center TESDA...</p>
+            <p style="text-align: right; margin-top: 10px"><button class="button" id="who_b">READ MORE</button></p>
+        </div>
+
+        <div class="follow">
+            <table>
+                <tr>
+                    <td><a href="https://www.facebook.com/pages/Informatics-Eastwood"><img src="@Url.Content("~/Content/icons/fb.png")" /></a></td>
+                    <td><a href="http://www.youtube.com"><img src="@Url.Content("~/Content/icons/yt.png")" /></a></td>
+                    <td><a href="http://www.twitter.com"><img src="@Url.Content("~/Content/icons/twt.png")" /></a></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+<div class="lx_slider">
+    @if (Model.sliderList.Count > 0)
+    {
+        if(Model.sliderList.Count > 1){
+            <div class="prev_next" style="margin-top: 70px">
+                <div class="mip">
+                    <div class="prev" onclick="Prev()">
+                        <p><</p>
+                    </div>
+                    <div class="next" onclick="Next()">
+                        <p>></p>
+                    </div>
+                </div>
+            </div>
+        }
+        int count = 0;
+        <div class="slides">
+            @foreach (var slider in Model.sliderList)
+            {
+                count++;
+                <div class="image" id="@count" style="background-image: url('@Url.Content(slider.imageDirectory)')">
+                    <div class="blacker"></div>
+                    <div class="message">
+                        <div class="mid">
+                            <h1>@Html.Raw(slider.title)</h1>
+                            <p>@slider.paragraph</p>
+                            @if(slider.button != null){
+                                <p><a href="@slider.url"><button class="button @slider.class_name">@slider.button</button></a></p>
+                            }
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    }
+    else
+    {
+        <div class="slides">
+            <div class="image" style="background-image: url('@Url.Content("~/Content/images/1.jpg")'); display: initial">
+                <div class="blacker"></div>
+                <div class="message">
+                    <div class="mid">
+                        <h1>Slider Title</h1>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+
+    <div class="lx_buttons">
+        @if (Model.sliderList.Count > 1)
+        {
+            int count = Model.sliderList.Count;
+            for (int i = 1; i <= count; i++)
+            {
+                if (i == 1)
+                {
+                    <div class="selected" id="b-1" onclick="Goto(1)"></div>
+                }
+                else
+                {
+                    <div id="b-@i" onclick="Goto(@i)"></div>
+                }
+            }
+        }
+    </div>
+</div>
+
+<script type="text/javascript">
+    @if(Model.sliderList.Count > 0){
+        int count = Model.sliderList.Count;
+        <text>
+        sliderInt = 1;
+        sliderNext = 2;
+
+        $('#web .lx_slider .slides .image#1').fadeIn('slow');
+        @if(count > 1){
+            <text>StartSlider();</text>
+        }
+
+        $('#web .lx_slider .slides .image').hover(function () {
+            window.clearInterval(loop);
+        }, function () {
+            StartSlider();
+        });
+
+        function Goto(num) {
+            if (sliderInt != num) {
+                window.clearInterval(loop);
+
+                $('#web .lx_slider .slides .image').fadeOut('slow');
+                $('#web .lx_slider .slides .image#' + num).fadeIn('slow');
+
+                $('.lx_buttons div').removeClass('selected');
+                $('.lx_buttons div#b-' + num).addClass('selected');
+
+                sliderInt = num;
+                sliderNext = num + 1;
+
+                StartSlider();
+            }
+        }
+
+        function Prev() {
+            newSlide = sliderInt - 1;
+            ShowSlider(newSlide);
+        }
+
+        function Next() {
+            newSlide = sliderInt + 1;
+            ShowSlider(newSlide);
+        }
+
+        function ShowSlider(num) {
+            window.clearInterval(loop);
+            if (num > count) {
+                num = 1;
+            }
+            else if (num < 1) {
+                num = count;
+            }
+
+            $('.lx_slider .slides .image').fadeOut('slow');
+            $('.lx_slider .slides .image#' + num).fadeIn('slow');
+
+            $('.lx_buttons div').removeClass('selected');
+            $('.lx_buttons div#b-' + num).addClass('selected');
+
+            sliderInt = num;
+            sliderNext = num + 1;
+
+            StartSlider();
+        }
+
+        function StartSlider() {
+            count = @count;
+
+            loop = setInterval(function () {
+                if (sliderNext > count) {
+                    sliderInt = 1;
+                    sliderNext = 1;
+                }
+
+                $('#web .lx_slider .slides .image').fadeOut('slow');
+                $('#web .lx_slider .slides .image#' + sliderNext).fadeIn('slow');
+
+                $('.lx_buttons div').removeClass('selected');
+                $('.lx_buttons div#b-' + sliderNext).addClass('selected');
+
+                sliderInt = sliderNext;
+                sliderNext++;
+            }, 15000);
+        }
+        </text>
+    }
+</script>

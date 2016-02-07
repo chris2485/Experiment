@@ -1,0 +1,42 @@
+c:\users\ang aming pamilya\documents\visual studio 2012\Projects\Experiment\Experiment\bin\Experiment.dll
+c:\users\ang aming pamilya\documents\visual studio 2012\Projects\Experiment\Experiment\bin\Experiment.pdb
+c:\users\ang aming pamilya\documents\visual studio 2012\Projects\Experiment\Experiment\bin\EntityFramework.dll
+c:\users\ang aming pamilya\documents\visual studio 2012\Projects\Experiment\Experiment\bin\Microsoft.Web.Infrastructure.dll
+c:\users\ang aming pamilya\documents\visual studio 2012\Projects\Experiment\Experiment\bin\System.Web.Helpers.dll
+c:\users\ang aming pamilya\documents\visual studio 2012\Projects\Experiment\Experiment\bin\System.Web.Mvc.dll
+c:\users\ang aming pamilya\documents\visual studio 2012\Projects\Experiment\Experiment\bin\System.Web.Providers.dll
+c:\users\ang aming pamilya\documents\visual studio 2012\Projects\Experiment\Experiment\bin\System.Web.Razor.dll
+c:\users\ang aming pamilya\documents\visual studio 2012\Projects\Experiment\Experiment\bin\System.Web.WebPages.Deployment.dll
+c:\users\ang aming pamilya\documents\visual studio 2012\Projects\Experiment\Experiment\bin\System.Web.WebPages.dll
+c:\users\ang aming pamilya\documents\visual studio 2012\Projects\Experiment\Experiment\bin\System.Web.WebPages.Razor.dll
+c:\users\ang aming pamilya\documents\visual studio 2012\Projects\Experiment\Experiment\bin\EntityFramework.xml
+c:\users\ang aming pamilya\documents\visual studio 2012\Projects\Experiment\Experiment\bin\System.Web.Helpers.xml
+c:\users\ang aming pamilya\documents\visual studio 2012\Projects\Experiment\Experiment\bin\System.Web.Mvc.xml
+c:\users\ang aming pamilya\documents\visual studio 2012\Projects\Experiment\Experiment\bin\System.Web.Razor.xml
+c:\users\ang aming pamilya\documents\visual studio 2012\Projects\Experiment\Experiment\bin\System.Web.WebPages.xml
+c:\users\ang aming pamilya\documents\visual studio 2012\Projects\Experiment\Experiment\bin\System.Web.WebPages.Deployment.xml
+c:\users\ang aming pamilya\documents\visual studio 2012\Projects\Experiment\Experiment\bin\System.Web.WebPages.Razor.xml
+c:\users\ang aming pamilya\documents\visual studio 2012\Projects\Experiment\Experiment\obj\Debug\Experiment.csprojResolveAssemblyReference.cache
+c:\users\ang aming pamilya\documents\visual studio 2012\Projects\Experiment\Experiment\obj\Debug\Experiment.dll
+c:\users\ang aming pamilya\documents\visual studio 2012\Projects\Experiment\Experiment\obj\Debug\Experiment.pdb
+G:\Experiment\Experiment\bin\Experiment.dll
+G:\Experiment\Experiment\bin\Experiment.pdb
+G:\Experiment\Experiment\bin\EntityFramework.dll
+G:\Experiment\Experiment\bin\Microsoft.Web.Infrastructure.dll
+G:\Experiment\Experiment\bin\System.Web.Helpers.dll
+G:\Experiment\Experiment\bin\System.Web.Mvc.dll
+G:\Experiment\Experiment\bin\System.Web.Providers.dll
+G:\Experiment\Experiment\bin\System.Web.Razor.dll
+G:\Experiment\Experiment\bin\System.Web.WebPages.Deployment.dll
+G:\Experiment\Experiment\bin\System.Web.WebPages.dll
+G:\Experiment\Experiment\bin\System.Web.WebPages.Razor.dll
+G:\Experiment\Experiment\bin\EntityFramework.xml
+G:\Experiment\Experiment\bin\System.Web.Helpers.xml
+G:\Experiment\Experiment\bin\System.Web.Mvc.xml
+G:\Experiment\Experiment\bin\System.Web.Razor.xml
+G:\Experiment\Experiment\bin\System.Web.WebPages.xml
+G:\Experiment\Experiment\bin\System.Web.WebPages.Deployment.xml
+G:\Experiment\Experiment\bin\System.Web.WebPages.Razor.xml
+G:\Experiment\Experiment\obj\Debug\Experiment.csprojResolveAssemblyReference.cache
+G:\Experiment\Experiment\obj\Debug\Experiment.dll
+G:\Experiment\Experiment\obj\Debug\Experiment.pdb

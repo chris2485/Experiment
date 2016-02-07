@@ -1,0 +1,106 @@
+﻿* {
+    margin: 0px;
+    padding: 0px;
+}
+
+header,
+footer,
+nav,
+section,
+body {
+    display: block;
+}
+
+/********* THINGS *********/
+
+input[type='radio'], input[type='checkbox'] {
+    cursor: pointer;
+}
+
+.RGBABG {
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    display: none;
+}
+
+    .RGBABG .mid {
+        display: table-cell;
+        vertical-align: middle;
+    }
+
+        .RGBABG .mid .panel {
+            background-color: #383838;
+            margin: auto;
+            padding: 20px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        @keyframes fadeInDown {
+          from {
+            opacity: 0;
+            transform: translate3d(0, -100%, 0);
+          }
+
+          to {
+            opacity: 1;
+            transform: none;
+          }
+        }
+
+        .fadeInDown {
+            animation: fadeInDown 0.75s ease;
+        }
+
+        @keyframes fadeOutUp {
+          from {
+            opacity: 1;
+          }
+
+          to {
+            opacity: 0;
+            transform: translate3d(0, -100%, 0);
+          }
+        }
+
+        .fadeOutUp {
+            animation: fadeOutUp 0.75s ease;
+        }
+
+            .RGBABG .mid .panel h1 {
+                color: #00a2ff;
+                font: bold 18px 'Tw Cen MT';
+                text-align: center;
+                margin-bottom: 20px;
+            }
+
+                .RGBABG .mid .panel h1  span {
+                    font: bold 32px 'Eurostile';
+                }
+
+            .RGBABG .mid .panel p {
+                color: white;
+                font: normal 14px 'Century Gothic';
+                text-indent: 50px;
+                text-align: justify;
+            }
+
+            .RGBABG .mid .panel img {
+                width: 400px;
+                margin: 40px auto;
+                display: block;
+            }
+
+/******** MEDIA SCREEN ***********/
+
+@media screen and (device-max-width: 768px) {
+    #web {
+        display: none;
+    }
+
+    #device {
+        display: initial;
+    }
+}

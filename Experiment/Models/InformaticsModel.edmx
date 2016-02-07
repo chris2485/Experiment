@@ -1,0 +1,312 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="db_informaticsModel.Store" Alias="Self" Provider="MySql.Data.MySqlClient" ProviderManifestToken="5.6" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="db_informaticsModelStoreContainer">
+          <EntitySet Name="about_information" EntityType="db_informaticsModel.Store.about_information" store:Type="Tables" Schema="db_informatics" />
+          <EntitySet Name="applicant_information" EntityType="db_informaticsModel.Store.applicant_information" store:Type="Tables" Schema="db_informatics" />
+          <EntitySet Name="branch_course" EntityType="db_informaticsModel.Store.branch_course" store:Type="Tables" Schema="db_informatics" />
+          <EntitySet Name="branch_information" EntityType="db_informaticsModel.Store.branch_information" store:Type="Tables" Schema="db_informatics" />
+          <EntitySet Name="course_information" EntityType="db_informaticsModel.Store.course_information" store:Type="Tables" Schema="db_informatics" />
+          <EntitySet Name="slider_information" EntityType="db_informaticsModel.Store.slider_information" store:Type="Tables" Schema="db_informatics" />
+          <EntitySet Name="staff_information" EntityType="db_informaticsModel.Store.staff_information" store:Type="Tables" Schema="db_informatics" />
+        </EntityContainer>
+        <EntityType Name="about_information">
+          <Key>
+            <PropertyRef Name="about_id" />
+          </Key>
+          <Property Name="about_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="imageDirectory" Type="varchar" MaxLength="500" />
+          <Property Name="background_color" Type="varchar" MaxLength="7" />
+          <Property Name="type" Type="varchar" Nullable="false" MaxLength="10" />
+          <Property Name="title_color" Type="varchar" MaxLength="7" />
+          <Property Name="title" Type="varchar" MaxLength="100" />
+          <Property Name="paragraphs_color" Type="varchar" MaxLength="7" />
+          <Property Name="paragraphs" Type="varchar" MaxLength="5000" />
+        </EntityType>
+        <EntityType Name="applicant_information">
+          <Key>
+            <PropertyRef Name="applicant_id" />
+          </Key>
+          <Property Name="applicant_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="branch_id" Type="int" Nullable="false" />
+          <Property Name="course_id" Type="int" Nullable="false" />
+          <Property Name="prefix" Type="varchar" Nullable="false" MaxLength="4" />
+          <Property Name="gender" Type="varchar" Nullable="false" MaxLength="6" />
+          <Property Name="firstname" Type="varchar" Nullable="false" MaxLength="45" />
+          <Property Name="middlename" Type="varchar" MaxLength="45" />
+          <Property Name="lastname" Type="varchar" Nullable="false" MaxLength="45" />
+          <Property Name="telephone" Type="varchar" MaxLength="15" />
+          <Property Name="mobile" Type="varchar" Nullable="false" MaxLength="15" />
+          <Property Name="email" Type="varchar" Nullable="false" MaxLength="45" />
+          <Property Name="address" Type="varchar" Nullable="false" MaxLength="200" />
+          <Property Name="hea" Type="varchar" Nullable="false" MaxLength="200" />
+          <Property Name="lsa" Type="varchar" Nullable="false" MaxLength="100" />
+          <Property Name="sa" Type="varchar" Nullable="false" MaxLength="200" />
+        </EntityType>
+        <EntityType Name="branch_course">
+          <Key>
+            <PropertyRef Name="branch_course_id" />
+          </Key>
+          <Property Name="branch_course_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="branch_id" Type="int" Nullable="false" />
+          <Property Name="course_id" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="branch_information">
+          <Key>
+            <PropertyRef Name="branch_id" />
+          </Key>
+          <Property Name="branch_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="branch" Type="varchar" Nullable="false" MaxLength="45" />
+          <Property Name="college" Type="varchar" Nullable="false" MaxLength="45" />
+          <Property Name="address" Type="varchar" Nullable="false" MaxLength="200" />
+        </EntityType>
+        <EntityType Name="course_information">
+          <Key>
+            <PropertyRef Name="course_id" />
+          </Key>
+          <Property Name="course_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="course_name" Type="varchar" Nullable="false" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="slider_information">
+          <Key>
+            <PropertyRef Name="slider_id" />
+          </Key>
+          <Property Name="slider_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="imageDirectory" Type="varchar" MaxLength="500" />
+          <Property Name="title" Type="varchar" Nullable="false" MaxLength="100" />
+          <Property Name="paragraph" Type="varchar" MaxLength="245" />
+          <Property Name="button" Type="varchar" MaxLength="20" />
+          <Property Name="class_name" Type="varchar" MaxLength="45" />
+          <Property Name="url" Type="varchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="staff_information">
+          <Key>
+            <PropertyRef Name="staff_id" />
+          </Key>
+          <Property Name="staff_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="imageDirectory" Type="varchar" MaxLength="500" />
+          <Property Name="prefix" Type="varchar" Nullable="false" MaxLength="4" />
+          <Property Name="gender" Type="varchar" Nullable="false" MaxLength="6" />
+          <Property Name="firstname" Type="varchar" Nullable="false" MaxLength="45" />
+          <Property Name="middlename" Type="varchar" MaxLength="45" />
+          <Property Name="lastname" Type="varchar" Nullable="false" MaxLength="45" />
+          <Property Name="position" Type="varchar" Nullable="false" MaxLength="100" />
+        </EntityType>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="db_informaticsModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="db_informaticsEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="about_information" EntityType="db_informaticsModel.about_information" />
+          <EntitySet Name="applicant_information" EntityType="db_informaticsModel.applicant_information" />
+          <EntitySet Name="branch_course" EntityType="db_informaticsModel.branch_course" />
+          <EntitySet Name="branch_information" EntityType="db_informaticsModel.branch_information" />
+          <EntitySet Name="course_information" EntityType="db_informaticsModel.course_information" />
+          <EntitySet Name="slider_information" EntityType="db_informaticsModel.slider_information" />
+          <EntitySet Name="staff_information" EntityType="db_informaticsModel.staff_information" />
+        </EntityContainer>
+        <EntityType Name="about_information">
+          <Key>
+            <PropertyRef Name="about_id" />
+          </Key>
+          <Property Name="about_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="imageDirectory" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+          <Property Name="background_color" Type="String" MaxLength="7" Unicode="false" FixedLength="false" />
+          <Property Name="type" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="false" />
+          <Property Name="title_color" Type="String" MaxLength="7" Unicode="false" FixedLength="false" />
+          <Property Name="title" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="paragraphs_color" Type="String" MaxLength="7" Unicode="false" FixedLength="false" />
+          <Property Name="paragraphs" Type="String" MaxLength="5000" Unicode="false" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="applicant_information">
+          <Key>
+            <PropertyRef Name="applicant_id" />
+          </Key>
+          <Property Name="applicant_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="branch_id" Type="Int32" Nullable="false" />
+          <Property Name="course_id" Type="Int32" Nullable="false" />
+          <Property Name="prefix" Type="String" Nullable="false" MaxLength="4" Unicode="false" FixedLength="false" />
+          <Property Name="gender" Type="String" Nullable="false" MaxLength="6" Unicode="false" FixedLength="false" />
+          <Property Name="firstname" Type="String" Nullable="false" MaxLength="45" Unicode="false" FixedLength="false" />
+          <Property Name="middlename" Type="String" MaxLength="45" Unicode="false" FixedLength="false" />
+          <Property Name="lastname" Type="String" Nullable="false" MaxLength="45" Unicode="false" FixedLength="false" />
+          <Property Name="telephone" Type="String" MaxLength="15" Unicode="false" FixedLength="false" />
+          <Property Name="mobile" Type="String" Nullable="false" MaxLength="15" Unicode="false" FixedLength="false" />
+          <Property Name="email" Type="String" Nullable="false" MaxLength="45" Unicode="false" FixedLength="false" />
+          <Property Name="address" Type="String" Nullable="false" MaxLength="200" Unicode="false" FixedLength="false" />
+          <Property Name="hea" Type="String" Nullable="false" MaxLength="200" Unicode="false" FixedLength="false" />
+          <Property Name="lsa" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="sa" Type="String" Nullable="false" MaxLength="200" Unicode="false" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="branch_course">
+          <Key>
+            <PropertyRef Name="branch_course_id" />
+          </Key>
+          <Property Name="branch_course_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="branch_id" Type="Int32" Nullable="false" />
+          <Property Name="course_id" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="branch_information">
+          <Key>
+            <PropertyRef Name="branch_id" />
+          </Key>
+          <Property Name="branch_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="branch" Type="String" Nullable="false" MaxLength="45" Unicode="false" FixedLength="false" />
+          <Property Name="college" Type="String" Nullable="false" MaxLength="45" Unicode="false" FixedLength="false" />
+          <Property Name="address" Type="String" Nullable="false" MaxLength="200" Unicode="false" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="course_information">
+          <Key>
+            <PropertyRef Name="course_id" />
+          </Key>
+          <Property Name="course_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="course_name" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="slider_information">
+          <Key>
+            <PropertyRef Name="slider_id" />
+          </Key>
+          <Property Name="slider_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="imageDirectory" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+          <Property Name="title" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="paragraph" Type="String" MaxLength="245" Unicode="false" FixedLength="false" />
+          <Property Name="button" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="class_name" Type="String" MaxLength="45" Unicode="false" FixedLength="false" />
+          <Property Name="url" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="staff_information">
+          <Key>
+            <PropertyRef Name="staff_id" />
+          </Key>
+          <Property Name="staff_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="imageDirectory" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+          <Property Name="prefix" Type="String" Nullable="false" MaxLength="4" Unicode="false" FixedLength="false" />
+          <Property Name="gender" Type="String" Nullable="false" MaxLength="6" Unicode="false" FixedLength="false" />
+          <Property Name="firstname" Type="String" Nullable="false" MaxLength="45" Unicode="false" FixedLength="false" />
+          <Property Name="middlename" Type="String" MaxLength="45" Unicode="false" FixedLength="false" />
+          <Property Name="lastname" Type="String" Nullable="false" MaxLength="45" Unicode="false" FixedLength="false" />
+          <Property Name="position" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="db_informaticsModelStoreContainer" CdmEntityContainer="db_informaticsEntities">
+          <EntitySetMapping Name="about_information">
+            <EntityTypeMapping TypeName="db_informaticsModel.about_information">
+              <MappingFragment StoreEntitySet="about_information">
+                <ScalarProperty Name="about_id" ColumnName="about_id" />
+                <ScalarProperty Name="imageDirectory" ColumnName="imageDirectory" />
+                <ScalarProperty Name="background_color" ColumnName="background_color" />
+                <ScalarProperty Name="type" ColumnName="type" />
+                <ScalarProperty Name="title_color" ColumnName="title_color" />
+                <ScalarProperty Name="title" ColumnName="title" />
+                <ScalarProperty Name="paragraphs_color" ColumnName="paragraphs_color" />
+                <ScalarProperty Name="paragraphs" ColumnName="paragraphs" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="applicant_information">
+            <EntityTypeMapping TypeName="db_informaticsModel.applicant_information">
+              <MappingFragment StoreEntitySet="applicant_information">
+                <ScalarProperty Name="applicant_id" ColumnName="applicant_id" />
+                <ScalarProperty Name="branch_id" ColumnName="branch_id" />
+                <ScalarProperty Name="course_id" ColumnName="course_id" />
+                <ScalarProperty Name="prefix" ColumnName="prefix" />
+                <ScalarProperty Name="gender" ColumnName="gender" />
+                <ScalarProperty Name="firstname" ColumnName="firstname" />
+                <ScalarProperty Name="middlename" ColumnName="middlename" />
+                <ScalarProperty Name="lastname" ColumnName="lastname" />
+                <ScalarProperty Name="telephone" ColumnName="telephone" />
+                <ScalarProperty Name="mobile" ColumnName="mobile" />
+                <ScalarProperty Name="email" ColumnName="email" />
+                <ScalarProperty Name="address" ColumnName="address" />
+                <ScalarProperty Name="hea" ColumnName="hea" />
+                <ScalarProperty Name="lsa" ColumnName="lsa" />
+                <ScalarProperty Name="sa" ColumnName="sa" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="branch_course">
+            <EntityTypeMapping TypeName="db_informaticsModel.branch_course">
+              <MappingFragment StoreEntitySet="branch_course">
+                <ScalarProperty Name="branch_course_id" ColumnName="branch_course_id" />
+                <ScalarProperty Name="branch_id" ColumnName="branch_id" />
+                <ScalarProperty Name="course_id" ColumnName="course_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="branch_information">
+            <EntityTypeMapping TypeName="db_informaticsModel.branch_information">
+              <MappingFragment StoreEntitySet="branch_information">
+                <ScalarProperty Name="branch_id" ColumnName="branch_id" />
+                <ScalarProperty Name="branch" ColumnName="branch" />
+                <ScalarProperty Name="college" ColumnName="college" />
+                <ScalarProperty Name="address" ColumnName="address" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="course_information">
+            <EntityTypeMapping TypeName="db_informaticsModel.course_information">
+              <MappingFragment StoreEntitySet="course_information">
+                <ScalarProperty Name="course_id" ColumnName="course_id" />
+                <ScalarProperty Name="course_name" ColumnName="course_name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="slider_information">
+            <EntityTypeMapping TypeName="db_informaticsModel.slider_information">
+              <MappingFragment StoreEntitySet="slider_information">
+                <ScalarProperty Name="slider_id" ColumnName="slider_id" />
+                <ScalarProperty Name="imageDirectory" ColumnName="imageDirectory" />
+                <ScalarProperty Name="title" ColumnName="title" />
+                <ScalarProperty Name="paragraph" ColumnName="paragraph" />
+                <ScalarProperty Name="button" ColumnName="button" />
+                <ScalarProperty Name="class_name" ColumnName="class_name" />
+                <ScalarProperty Name="url" ColumnName="url" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="staff_information">
+            <EntityTypeMapping TypeName="db_informaticsModel.staff_information">
+              <MappingFragment StoreEntitySet="staff_information">
+                <ScalarProperty Name="staff_id" ColumnName="staff_id" />
+                <ScalarProperty Name="imageDirectory" ColumnName="imageDirectory" />
+                <ScalarProperty Name="prefix" ColumnName="prefix" />
+                <ScalarProperty Name="gender" ColumnName="gender" />
+                <ScalarProperty Name="firstname" ColumnName="firstname" />
+                <ScalarProperty Name="middlename" ColumnName="middlename" />
+                <ScalarProperty Name="lastname" ColumnName="lastname" />
+                <ScalarProperty Name="position" ColumnName="position" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

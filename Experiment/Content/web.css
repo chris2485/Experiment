@@ -1,0 +1,1038 @@
+﻿#web {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+}
+
+    /********** MENU ***********/
+
+    #web .lx_menu {
+        position: fixed;
+        right: 0px;
+        z-index: 5;
+    }
+
+        #web .lx_menu ul {
+            list-style: none;
+            margin: 20px;
+            border-right: 3px solid white;
+            padding-right: 20px;
+        }
+
+            #web .lx_menu ul li {
+                text-align: right;
+                padding: 5px 0px;
+            }
+
+            #web .lx_menu ul li:hover a, #web .lx_menu ul li:hover span {
+                font-size: 24px;
+                color: #00a2ff;
+            }
+
+            #web .lx_menu ul li:hover a img, #web .lx_menu ul li:hover span img {
+                width: 25px;
+                margin-left: 5px;
+            }
+
+                #web .lx_menu ul li a, #web .lx_menu ul li span {
+                    color: white;
+                    text-decoration: none;
+                    font: normal 20px 'Century Gothic';
+                    cursor: pointer;
+                    transition: font 0.2s ease, color 0.2s ease;
+                }
+
+                    #web .lx_menu ul li a img, #web .lx_menu ul li span img {
+                        width: 15px;
+                        margin-left: 10px;
+                        transition: width 0.2s ease, margin 0.2s ease;
+                    }
+
+    /********** SIDE PANEL ***********/
+
+    #web .lx_side_panel {
+        position: fixed;
+        background-color: white;
+        width: 25vw;
+        height: 100%;
+        overflow: auto;
+    }
+
+        #web .lx_side_panel .title {
+            padding: 10px 30px;
+        }
+
+            #web .lx_side_panel .title img {
+                width: 100%;
+            }
+
+        #web .lx_side_panel .content {
+            margin-top: 0px;
+            padding: 10px 30px;
+        }
+
+            #web .lx_side_panel .content .why_who {
+                margin-bottom: 10px;
+            }
+
+                #web .lx_side_panel .content .why_who h1 {
+                    color: #00a2ff;
+                    font: bold 14px 'Tw Cen MT';
+                }
+
+                    #web .lx_side_panel .content .why_who h1 span {
+                        font: bold 28px 'Eurostile';
+                    }
+
+                #web .lx_side_panel .content .why_who .paragraph {
+                    color: #383838;
+                    font: normal 14px 'Century Gothic';
+                    text-align: justify;
+                }
+
+                    #web .lx_side_panel .content .why_who p .button {
+                        border: 0px;
+                        padding: 8px 30px;
+                        background-color: #00a2ff;
+                        color: white;
+                        font: normal 14px 'Tw Cen MT';
+                        cursor: pointer;
+                    }
+
+            #web .lx_side_panel .content .follow {
+                margin-top: 30px;
+                border-top: 1px solid lightgray;
+                padding: 20px 0px;
+            }
+
+                #web .lx_side_panel .content .follow table {
+                    margin: auto;
+                }
+
+                    #web .lx_side_panel .content .follow table td {
+                        padding: 0px 5px;
+                    }
+
+                        #web .lx_side_panel .content .follow table td a img {
+                            width: 35px;
+                            transition: transform 0.2s ease;
+                        }
+
+                        #web .lx_side_panel .content .follow table td a img:hover {
+                            transform: scale(1.2, 1.2);
+                        }
+
+    /********** SLIDER ***********/
+
+    #web .lx_slider {
+        position: fixed;
+        right: 0px;
+        width: 75vw;
+        height: 100%;
+    }
+
+        .lx_slider .lx_buttons {
+		    position: fixed;
+            bottom: 0px;
+            z-index: 5;
+            margin: 15px 20px;
+	    }
+
+            .lx_slider .lx_buttons div {
+		        width: 40px;
+                height: 6px;
+                border: 1px solid white;
+                float: left;
+                margin-left: 5px;
+                cursor: pointer;
+	        }
+
+            .lx_slider .lx_buttons div.selected {
+		        background-color: white;
+	        }
+
+        .lx_slider .prev_next {
+		    position: fixed;
+            right: 0px;
+            display: table;
+            z-index: 5;
+            height: 100%;
+	    }
+
+            .lx_slider .prev_next .mip {
+		        display: table-cell;
+                vertical-align: middle;
+	        }    
+
+                .lx_slider .prev_next .mip .prev {
+		            border: 2px solid white;
+                    width: 40px;
+                    height: 40px;
+                    cursor: pointer;
+                    transform: rotate(-45deg);
+                    margin-left: -43px;
+                    transition: width 0.2s ease, height 0.2s ease, margin 0.2s ease;
+	            }
+
+                .lx_slider .prev_next .mip .prev:hover {
+		            width: 50px;
+                    height: 50px;
+                    margin-left: -54px;
+	            }
+
+                .lx_slider .prev_next .mip .prev:hover p {
+                    transform: rotate(45deg) translate(14px, -2px);
+                    font-size: 42px;
+	            }
+
+                    .lx_slider .prev_next .mip .prev p {
+		                color: white;
+                        transform: rotate(45deg) translate(10px, -3px);
+                        font: normal 36px 'Agency FB';
+                        transition: transform 0.2s ease, font 0.2s ease;
+	                }    
+
+                .lx_slider .prev_next .mip .next {
+		            border: 2px solid white;
+                    width: 40px;
+                    height: 40px;
+                    cursor: pointer;
+                    transform: rotate(45deg);
+                    margin-right: 20px;
+                    transition: width 0.2s ease, height 0.2s ease, margin 0.2s ease;
+	            }
+
+                .lx_slider .prev_next .mip .next:hover {
+		            width: 50px;
+                    height: 50px;
+                    margin-right: 18px;
+	            }
+
+                .lx_slider .prev_next .mip .next:hover p {
+                    transform: rotate(-45deg) translate(20px, -3px);
+                    font-size: 42px;
+	            }
+
+                    .lx_slider .prev_next .mip .next p {
+		                color: white;
+                        transform: rotate(-45deg) translate(16px, -3px);
+                        font: normal 36px 'Agency FB';
+                        transition: transform 0.2s ease, font 0.2s ease;
+	                } 
+
+        #web .lx_slider .slides {
+            position: absolute;
+            background-color: black;
+            width: 100%;
+            height: 100%;
+        }
+
+            #web .lx_slider .slides .image {
+                position: absolute;
+                background-attachment: fixed;
+                background-size: cover;
+                width: 100%;
+                height: 100%;
+                display: none;
+            }
+
+                #web .lx_slider .slides .image .blacker {
+                    position: absolute;
+                    background-color: rgba(0, 0, 0, 0.5);
+                    width: 100%;
+                    height: 100%;
+                }
+
+                #web .lx_slider .slides .image .message {
+                    position: absolute;
+                    display: table;
+                    width: 50%;
+                    height: 100%;
+                    margin-left: 20px;
+                }
+
+                    #web .lx_slider .slides .image .message .mid {
+                        display: table-cell;
+                        vertical-align: middle;
+                    }
+
+                        #web .lx_slider .slides .image .message .mid h1 {
+                            color: white;
+                            font: bold 42px 'Century Gothic';
+                        }
+
+                            #web .lx_slider .slides .image .message .mid h1 span {
+                                color: #00a2ff;
+                            }
+
+                        #web .lx_slider .slides .image .message .mid p {
+                            color: white;
+                            font: normal 16px 'Century Gothic';
+                            margin-top: 10px;
+                        }
+
+                            #web .lx_slider .slides .image .message .mid p a {
+                                text-decoration: none;
+                            }
+
+                                #web .lx_slider .slides .image .message .mid p a .button {
+                                    border: 0px;
+                                    padding: 10px 30px;
+                                    background-color: #00a2ff;
+                                    font: normal 16px 'Century Gothic';
+                                    color: white;
+                                    cursor: pointer;
+                                }
+
+    /********** CONTACT ***********/
+
+    #web #lx_contact_left {
+        position: fixed;
+        background-image: url('photos/map.png');
+        background-position: 60% center;
+        background-size: cover;
+        left: 0px;
+        width: 50%;
+        height: 100%;
+        z-index: 10;
+        display: none;
+    }
+
+    @keyframes slideInLeft {
+        from {
+            left: -50%;
+        }
+        to {
+            left: 0px;
+        }
+    }
+
+    .slideInLeft {
+        animation: slideInLeft 0.5s ease;
+    }
+
+    @keyframes slideOutLeft {
+        from {
+            left: 0%;
+        }
+        to {
+            left: -50%;
+        }
+    }
+
+    .slideOutLeft {
+        animation: slideOutLeft 0.5s ease;
+    }
+
+    #web #lx_contact_right {
+        position: fixed;
+        background-color: #383838;
+        right: 0px;
+        width: 50%;
+        height: 100%;
+        z-index: 10;
+        display: none;
+    }
+
+    #web #lx_contact_right .container {
+        display: table;
+        width: 100%;
+        height: 100%;
+        padding: 5%;
+    }
+
+    #web #lx_contact_right .mid {
+        display: table-cell;
+        vertical-align: middle;
+    }
+
+        #web #lx_contact_right #back_contact {
+            border: 0px;
+            background-color: #00a2ff;
+            color: white;
+            padding: 8px 30px;
+            font: normal 14px 'Century Gothic';
+            cursor: pointer;
+        }
+
+        #web #lx_contact_right h1 {
+            color: #00a2ff;
+            font: bold 28px 'Tw Cen MT';
+        }
+
+            #web #lx_contact_right h1 span {
+                font: bold 38px 'Eurostile';
+            }
+
+        #web #lx_contact_right h2 {
+            color: white;
+            font: normal 16px 'Eurostile';
+        }
+
+            #web #lx_contact_right .message .textbox {
+                border: 0px;
+                background-color: rgba(0, 0, 0, 0.3);
+                color: white;
+                padding: 8px 10px;
+                font: normal 12px 'Century Gothic';
+                width: 150px;
+            }
+
+            #web #lx_contact_right .message textarea {
+                border: 0px;
+                background-color: rgba(0, 0, 0, 0.3);
+                color: white;
+                padding: 10px;
+                font: normal 12px 'Century Gothic';
+                resize: none;
+                margin-top: 4px;
+                width: 324px;
+            }
+
+            #web #lx_contact_right .message .button {
+                border: 0px;
+                background-color: black;
+                color: white;
+                padding: 10px 50px;
+                font: normal 14px 'Century Gothic';
+                cursor: pointer;
+                margin-left: 198px
+            }
+
+        #web #lx_contact_right .address {
+            color: white;
+            font: normal 14px 'Century Gothic';
+        }
+
+            #web #lx_contact_right .address img {
+                width: 15px;
+            }
+
+            #web #lx_contact_right .address strong {
+                font: bold 16px 'Tw Cen MT';
+            }
+
+        #web #lx_contact_right .follow {
+            margin-top: 30px;
+        }
+
+            #web #lx_contact_right .follow th {
+                text-align: left;
+                color: lightgray;
+                font: normal 16px 'Times New Roman';
+                font-style: italic;
+            }
+
+            #web #lx_contact_right .follow img {
+                width: 30px;
+                transition: transform 0.2s ease;
+            }
+
+            #web #lx_contact_right .follow a:hover img {
+                transform: scale(1.2, 1.2);
+            }
+
+    @keyframes slideInRight {
+        from {
+            right: -50%;
+        }
+        to {
+            right: 0px;
+        }
+    }
+
+    .slideInRight {
+        animation: slideInRight 0.5s ease;
+    }
+
+    @keyframes slideOutRight {
+        from {
+            right: 0%;
+        }
+        to {
+            right: -50%;
+        }
+    }
+
+    .slideOutRight {
+        animation: slideOutRight 0.5s ease;
+    }
+
+    /********** COURSE ***********/
+
+    #web #lx_course_left {
+        position: fixed;
+        background-image: url('images/dark_blue_bg.png');
+        background-attachment: fixed;
+        background-size: cover;
+        top: 0px;
+        left: 0px;
+        width: 35%;
+        height: 100%;
+        z-index: 10;
+        display: none;
+        overflow: auto;
+    }
+
+        #web #lx_course_left .left {
+            position: absolute;
+            left: 0px;
+            width: 20%;
+            height: 100%;
+        }
+
+            #web #lx_course_left .left .container {
+                display: table;
+                width: 100%;
+                height: 100%;
+            }
+
+                #web #lx_course_left .left .container .mid {
+                    display: table-cell;
+                    vertical-align: middle;
+                    text-align: center;
+                }
+
+                    #web #lx_course_left .left .container .mid div {
+                        color: white;
+                        font: bold 36px 'Agency FB';
+                        cursor: pointer;
+                        opacity: 0.75;
+                        transform: rotate(90deg) scale(1, 1.5) translate(0px, -2px);
+                        transition: font 0.2s ease, opacity 0.2s ease;
+                    }
+
+                    #web #lx_course_left .left .container .mid div:hover {
+                        font-size: 42px;
+                        opacity: 1;
+                    }
+
+                    #web #lx_course_left .left .container .mid p span {
+                        position: absolute;
+                        color: white;
+                        margin: 25px 0px 0px 40px;
+                        font: normal 16px 'Tw Cen MT';
+                        text-align: left;
+                        text-shadow: 0px 0px 10px white;
+                        display: none;
+                    }
+
+                    #web #lx_course_left .left .container .mid p:hover span {
+                        display: initial;
+                    }
+
+                    #web #lx_course_left .left .container .mid p img {
+                        width: 40px;
+                        margin: 10px auto;
+                        display: block;
+                        cursor: pointer;
+                        transition: width 0.2s ease, transform 0.2s ease;
+                    }
+
+                    #web #lx_course_left .left .container .mid p:hover img {
+                        width: 50px;
+                        transform: rotate(12deg);
+                    }
+
+        #web #lx_course_left .right {
+            position: absolute;
+            right: 0px;
+            width: 70%;
+            height: 100%;
+        }
+
+            #web #lx_course_left .right .container {
+                display: table;
+                width: 100%;
+                height: 100%;
+            }
+
+                #web #lx_course_left .right .container .mid {
+                    display: table-cell;
+                    vertical-align: middle;
+                }
+
+                    #web #lx_course_left .right .container .mid img {
+                        display: none;
+                        margin: auto;
+                    }
+
+    @keyframes slideInDown {
+        0% {
+            top: -100%;
+        }
+        70% {
+            top: 0px;
+            height: 105%;
+        }
+        100% {
+            height: 100%;
+        }
+    }
+
+    .slideInDown {
+        animation: slideInDown 0.5s linear;
+    }
+
+    @keyframes slideOutUp {
+        from {
+            top: 0%;
+        }
+        to {
+            top: -100%;
+        }
+    }
+
+    .slideOutUp {
+        animation: slideOutUp 0.3s linear;
+    }
+
+    #web #lx_course_right {
+        position: fixed;
+        background-color: #383838;
+        right: 0px;
+        bottom: 0px;
+        width: 65%;
+        height: 100%;
+        z-index: 10;
+        display: none;
+    }
+
+        #web #lx_course_right .container {
+            padding: 5%;
+        }
+
+            #web #lx_course_right .container .button {
+                border: 0px;
+                background-color: #00a2ff;
+                color: white;
+                padding: 10px 30px;
+                font: normal 14px 'Century Gothic';
+                cursor: pointer;
+            }
+
+            #web #lx_course_right .container .info {
+                display: none;
+            }
+
+            #web #lx_course_right .container h1 {
+                color: white;
+                font: bold 36px 'Century Gothic';
+            }
+
+            #web #lx_course_right .container h2 {
+                color: white;
+                font: normal 14px 'Century Gothic';
+                text-align: justify;
+            }
+
+            #web #lx_course_right .container .features {
+                margin-top: 20px;
+                float: left;
+                width: 50%;
+            }
+
+                #web #lx_course_right .container .features td img {
+                    width: 30px;
+                }
+
+                #web #lx_course_right .container .features th {
+                    color: #00a2ff;
+                    font: bold 28px 'Century Gothic';
+                    text-align: left;
+                }
+
+                #web #lx_course_right .container .features td {
+                    color: white;
+                    font: bold 16px 'Tw Cen MT';
+                    padding: 5px 0px;
+                }
+
+            #web #lx_course_right .container .informations {
+                margin-top: 20px;
+                float: left;
+                width: 50%;
+            }
+
+                #web #lx_course_right .container .informations th {
+                    color: #00a2ff;
+                    font: bold 28px 'Century Gothic';
+                    text-align: left;
+                }
+
+                #web #lx_course_right .container .informations td {
+                    padding: 10px 0px;
+                }
+
+                    #web #lx_course_right .container .informations td strong {
+                        color: white;
+                        font: bold 14px 'Century Gothic';
+                    }
+
+                    #web #lx_course_right .container .informations td .percentage_bg {
+                        background-color: rgba(0, 0, 0, 0.3);
+                        width: 100%;
+                        height: 25px;
+                    }
+
+                        #web #lx_course_right .container .informations td .percentage_val {
+                            background-color: #00a2ff;
+                            height: 100%;
+                            display: table;
+                        }
+
+                            #web #lx_course_right .container .informations td .percentage_val .mid {
+                                color: white;
+                                font: normal 12px 'Tw Cen MT';
+                                text-align: right;
+                                display: table-cell;
+                                vertical-align: middle;
+                                padding-right: 5px;
+                            }
+
+            #web #lx_course_right .container .buttons {
+                margin-top: 20px;
+            }
+
+                #web #lx_course_right .container .buttons .button {
+                    border: 0px;
+                    background-color: #00a2ff;
+                    color: white;
+                    padding: 10px 50px;
+                    font: bold 18px 'Century Gothic';
+                }
+
+    @keyframes slideInUp {
+        0% {
+            bottom: -100%;
+        }
+        70% {
+            bottom: 0px;
+            height: 105%;
+        }
+        100% {
+            height: 100%;
+        }
+    }
+
+    .slideInUp {
+        animation: slideInUp 0.5s ease;
+    }
+
+    @keyframes slideOutDown {
+        from {
+            bottom: 0%;
+        }
+        to {
+            bottom: -100%;
+        }
+    }
+
+    .slideOutDown {
+        animation: slideOutDown 0.3s linear;
+    }
+
+    /********** BRANCH ***********/
+
+    #web #lx_branch {
+        position: fixed;
+        background-color: #383838;
+        bottom: 0px;
+        width: 100%;
+        height: 100%;
+        z-index: 10;
+        display: none;
+    }
+
+        #web #lx_branch .container {
+            height: 100%;
+            background-image: url('photos/pilipinas.png');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+            overflow: hidden;
+            cursor: move;
+        }
+
+    @keyframes branchInDown {
+        from {
+            transform-origin: top center;
+            transform: perspective(600px) rotateX(-90deg);
+        }
+        to {
+            transform-origin: top center;
+            transform: perspective(600px) rotateX(0deg);
+        }
+    }
+
+    .branchInDown {
+        animation: branchInDown 0.5s ease;
+    }
+
+    @keyframes branchOutUp {
+        from {
+            transform-origin: top center;
+            transform: perspective(600px) rotateX(0deg);
+        }
+        to {
+            transform-origin: top center;
+            transform: perspective(600px) rotateX(-90deg);
+        }
+    }
+
+    .branchOutUp {
+        animation: branchOutUp 0.75s ease;
+    }
+
+    /********** ABOUT ***********/
+
+    #web #lx_about {
+        position: fixed;
+        background-color: white;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        z-index: 5;
+        border-top: 10px solid #383838;
+        overflow: auto;
+        display: none;
+    }
+
+        #web #lx_about .header {
+            width: 800px;
+            margin: auto;
+        }
+
+            #web #lx_about .header table {
+                width: 100%;
+            }
+
+                #web #lx_about .header table td {
+                    width: 360px;
+                    padding: 20px 0px;
+                }
+
+                    #web #lx_about .header table td h1 {
+                        color: #383838;
+                        font: bold 54px 'Eurostile';
+                        text-align: center;
+                    }
+
+                    #web #lx_about .header table td p {
+                        color: #383838;
+                        font: normal 16px 'Century Gothic';
+                        text-align: justify;
+                    }
+
+        #web #lx_about .content {
+            width: 800px;
+            margin: auto;
+        }
+
+            #web #lx_about .content .panel {
+                background-color: white;
+                float: left;
+                width: 180px;
+                margin: 10px;
+                box-shadow: 0px 0px 1px gray;
+                overflow: hidden;
+            }
+
+                #web #lx_about .content .panel .image {
+                    width: 180px;
+                    height: 180px;
+                    display: table-cell;
+                    vertical-align: middle;
+                }
+
+                    #web #lx_about .content .panel .image img {
+                        max-width: 100%;
+                        max-height: 100%;
+                        display: block;
+                        margin: auto;
+                    }
+
+                #web #lx_about .content .panel .info {
+                    padding: 10px;
+                }
+
+                    #web #lx_about .content .panel .info h1 {
+                        font: bold 14px 'Agency FB';
+                        text-align: center;
+                    }
+
+                    #web #lx_about .content .panel .info h2 {
+                        font: normal 12px 'Tw Cen MT';
+                        text-align: center;
+                    }
+
+    @keyframes aboutInUp {
+        from {
+            bottom: -100%;
+        }
+        to {
+            bottom: 0px;
+        }
+    }
+
+    .aboutInUp {
+        animation: aboutInUp 0.5s ease;
+    }
+
+    @keyframes aboutOutDown {
+        from {
+            bottom: 0px;
+        }
+        to {
+            bottom: -100%;
+        }
+    }
+
+    .aboutOutDown {
+        animation: aboutOutDown 0.5s ease;
+    }
+
+    /********* APPLY **********/
+
+    #web #apply_icon {
+        position: fixed;
+        height: 15%;
+        right: 20px;
+        bottom: 5px;
+        z-index: 5;
+    }
+
+    #web #apply_icon:hover {
+        transform: rotate(-5deg);
+    }
+
+    @keyframes zoomIn {
+        0% {
+            transform: rotate(5deg) scale(0, 0);
+        }
+        40% {
+            transform: rotate(5deg) scale(1.2, 1.2);
+        }
+        100% {
+            transform: rotate(5deg) scale(1, 1);
+        }
+    }
+
+    .zoomIn {
+        animation: zoomIn 0.5s ease;
+    }
+
+        #web #apply_icon .arrow {
+            position: absolute;
+            background-color: white;
+            padding: 15px;
+            color: #383838;
+            font: bold 16px 'Century Gothic';
+            cursor: pointer;
+            margin: -50px 0px 0px -30px;
+            border-radius: 5px;
+            width: 100px;
+            text-align: center;
+            transform: rotate(5deg);
+            display: none;
+        }
+
+            #web #apply_icon .arrow span {
+                position: absolute;
+                border-left: 20px solid transparent;
+                border-top: 30px solid white;
+                margin: 20px 0px 0px 30px;
+            }
+
+        #web #apply_icon img {
+            height: 100%;
+            cursor: pointer;
+        }
+
+    #web #lx_apply {
+        position: fixed;
+        background-color: rgba(0, 0, 0, 0.5);
+        width: 100%;
+        height: 100%;
+        z-index: 10;
+        display: none;
+    }
+
+        #web #lx_apply .panel {
+            position: absolute;
+            background-color: #383838;
+            right: 0px;
+            width: 40%;
+            height: 100%;
+        }
+
+            #web #lx_apply .panel h1 {
+                color: #00a2ff;
+                font: bold 36px 'Eurostile';
+                text-align: center;
+                margin-top: 20px;
+                padding-bottom: 10px;
+                border-bottom: 1px solid gray;
+            }
+
+            #web #lx_apply .panel h2 {
+                color: gray;
+                font: bold 22px 'Century Gothic';
+                padding: 0px 20px;
+            }
+
+            #web #lx_apply .panel p {
+                color: white;
+                padding: 0px 20px;
+                padding-top: 5px;
+                font: normal 14px 'Century Gothic';
+            }
+
+                #web #lx_apply .panel table .button {
+                    border: 0px;
+                    background-color: #00a2ff;
+                    color: white;
+                    font: normal 14px 'Century Gothic';
+                    padding: 8px 30px;
+                    cursor: pointer;
+                }
+
+                #web #lx_apply .panel p .textbox {
+                    border: 1px solid rgba(0, 0, 0, 0.3);
+                    background-color: rgba(0, 0, 0, 0.3);
+                    color: white;
+                    padding: 7px 10px;
+                    font: normal 14px 'Century Gothic';
+                }
+
+                    #web #lx_apply .panel p .textbox option {
+                        border: 0px;
+                        background-color: white;
+                        color: #383838;
+                    }
+
+        @keyframes applyInLeft {
+            from {
+                right: -40%;
+            }
+            to {
+                right: 0%;
+            }
+        }
+
+        .applyInLeft {
+            animation: applyInLeft 0.5s ease;
+        }
+
+        @keyframes applyOutRight {
+            from {
+                right: 0px;
+            }
+            to {
+                right: -40%;
+            }
+        }
+
+        .applyOutRight {
+            animation: applyOutRight 0.5s ease;
+        }

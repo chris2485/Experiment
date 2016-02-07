@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="db_informaticsModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+  <EntityContainer Name="db_informaticsEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="about_information" EntityType="db_informaticsModel.about_information" />
+    <EntitySet Name="applicant_information" EntityType="db_informaticsModel.applicant_information" />
+    <EntitySet Name="branch_course" EntityType="db_informaticsModel.branch_course" />
+    <EntitySet Name="branch_information" EntityType="db_informaticsModel.branch_information" />
+    <EntitySet Name="course_information" EntityType="db_informaticsModel.course_information" />
+    <EntitySet Name="slider_information" EntityType="db_informaticsModel.slider_information" />
+    <EntitySet Name="staff_information" EntityType="db_informaticsModel.staff_information" />
+  </EntityContainer>
+  <EntityType Name="about_information">
+    <Key>
+      <PropertyRef Name="about_id" />
+    </Key>
+    <Property Name="about_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="imageDirectory" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+    <Property Name="background_color" Type="String" MaxLength="7" Unicode="false" FixedLength="false" />
+    <Property Name="type" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="title_color" Type="String" MaxLength="7" Unicode="false" FixedLength="false" />
+    <Property Name="title" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="paragraphs_color" Type="String" MaxLength="7" Unicode="false" FixedLength="false" />
+    <Property Name="paragraphs" Type="String" MaxLength="5000" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="applicant_information">
+    <Key>
+      <PropertyRef Name="applicant_id" />
+    </Key>
+    <Property Name="applicant_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="branch_id" Type="Int32" Nullable="false" />
+    <Property Name="course_id" Type="Int32" Nullable="false" />
+    <Property Name="prefix" Type="String" Nullable="false" MaxLength="4" Unicode="false" FixedLength="false" />
+    <Property Name="gender" Type="String" Nullable="false" MaxLength="6" Unicode="false" FixedLength="false" />
+    <Property Name="firstname" Type="String" Nullable="false" MaxLength="45" Unicode="false" FixedLength="false" />
+    <Property Name="middlename" Type="String" MaxLength="45" Unicode="false" FixedLength="false" />
+    <Property Name="lastname" Type="String" Nullable="false" MaxLength="45" Unicode="false" FixedLength="false" />
+    <Property Name="telephone" Type="String" MaxLength="15" Unicode="false" FixedLength="false" />
+    <Property Name="mobile" Type="String" Nullable="false" MaxLength="15" Unicode="false" FixedLength="false" />
+    <Property Name="email" Type="String" Nullable="false" MaxLength="45" Unicode="false" FixedLength="false" />
+    <Property Name="address" Type="String" Nullable="false" MaxLength="200" Unicode="false" FixedLength="false" />
+    <Property Name="hea" Type="String" Nullable="false" MaxLength="200" Unicode="false" FixedLength="false" />
+    <Property Name="lsa" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="sa" Type="String" Nullable="false" MaxLength="200" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="branch_course">
+    <Key>
+      <PropertyRef Name="branch_course_id" />
+    </Key>
+    <Property Name="branch_course_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="branch_id" Type="Int32" Nullable="false" />
+    <Property Name="course_id" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="branch_information">
+    <Key>
+      <PropertyRef Name="branch_id" />
+    </Key>
+    <Property Name="branch_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="branch" Type="String" Nullable="false" MaxLength="45" Unicode="false" FixedLength="false" />
+    <Property Name="college" Type="String" Nullable="false" MaxLength="45" Unicode="false" FixedLength="false" />
+    <Property Name="address" Type="String" Nullable="false" MaxLength="200" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="course_information">
+    <Key>
+      <PropertyRef Name="course_id" />
+    </Key>
+    <Property Name="course_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="course_name" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="slider_information">
+    <Key>
+      <PropertyRef Name="slider_id" />
+    </Key>
+    <Property Name="slider_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="imageDirectory" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+    <Property Name="title" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="paragraph" Type="String" MaxLength="245" Unicode="false" FixedLength="false" />
+    <Property Name="button" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="class_name" Type="String" MaxLength="45" Unicode="false" FixedLength="false" />
+    <Property Name="url" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="staff_information">
+    <Key>
+      <PropertyRef Name="staff_id" />
+    </Key>
+    <Property Name="staff_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="imageDirectory" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+    <Property Name="prefix" Type="String" Nullable="false" MaxLength="4" Unicode="false" FixedLength="false" />
+    <Property Name="gender" Type="String" Nullable="false" MaxLength="6" Unicode="false" FixedLength="false" />
+    <Property Name="firstname" Type="String" Nullable="false" MaxLength="45" Unicode="false" FixedLength="false" />
+    <Property Name="middlename" Type="String" MaxLength="45" Unicode="false" FixedLength="false" />
+    <Property Name="lastname" Type="String" Nullable="false" MaxLength="45" Unicode="false" FixedLength="false" />
+    <Property Name="position" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+  </EntityType>
+</Schema>

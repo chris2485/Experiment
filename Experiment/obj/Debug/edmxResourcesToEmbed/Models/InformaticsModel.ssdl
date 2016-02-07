@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="db_informaticsModel.Store" Alias="Self" Provider="MySql.Data.MySqlClient" ProviderManifestToken="5.6" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="db_informaticsModelStoreContainer">
+    <EntitySet Name="about_information" EntityType="db_informaticsModel.Store.about_information" store:Type="Tables" Schema="db_informatics" />
+    <EntitySet Name="applicant_information" EntityType="db_informaticsModel.Store.applicant_information" store:Type="Tables" Schema="db_informatics" />
+    <EntitySet Name="branch_course" EntityType="db_informaticsModel.Store.branch_course" store:Type="Tables" Schema="db_informatics" />
+    <EntitySet Name="branch_information" EntityType="db_informaticsModel.Store.branch_information" store:Type="Tables" Schema="db_informatics" />
+    <EntitySet Name="course_information" EntityType="db_informaticsModel.Store.course_information" store:Type="Tables" Schema="db_informatics" />
+    <EntitySet Name="slider_information" EntityType="db_informaticsModel.Store.slider_information" store:Type="Tables" Schema="db_informatics" />
+    <EntitySet Name="staff_information" EntityType="db_informaticsModel.Store.staff_information" store:Type="Tables" Schema="db_informatics" />
+  </EntityContainer>
+  <EntityType Name="about_information">
+    <Key>
+      <PropertyRef Name="about_id" />
+    </Key>
+    <Property Name="about_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="imageDirectory" Type="varchar" MaxLength="500" />
+    <Property Name="background_color" Type="varchar" MaxLength="7" />
+    <Property Name="type" Type="varchar" Nullable="false" MaxLength="10" />
+    <Property Name="title_color" Type="varchar" MaxLength="7" />
+    <Property Name="title" Type="varchar" MaxLength="100" />
+    <Property Name="paragraphs_color" Type="varchar" MaxLength="7" />
+    <Property Name="paragraphs" Type="varchar" MaxLength="5000" />
+  </EntityType>
+  <EntityType Name="applicant_information">
+    <Key>
+      <PropertyRef Name="applicant_id" />
+    </Key>
+    <Property Name="applicant_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="branch_id" Type="int" Nullable="false" />
+    <Property Name="course_id" Type="int" Nullable="false" />
+    <Property Name="prefix" Type="varchar" Nullable="false" MaxLength="4" />
+    <Property Name="gender" Type="varchar" Nullable="false" MaxLength="6" />
+    <Property Name="firstname" Type="varchar" Nullable="false" MaxLength="45" />
+    <Property Name="middlename" Type="varchar" MaxLength="45" />
+    <Property Name="lastname" Type="varchar" Nullable="false" MaxLength="45" />
+    <Property Name="telephone" Type="varchar" MaxLength="15" />
+    <Property Name="mobile" Type="varchar" Nullable="false" MaxLength="15" />
+    <Property Name="email" Type="varchar" Nullable="false" MaxLength="45" />
+    <Property Name="address" Type="varchar" Nullable="false" MaxLength="200" />
+    <Property Name="hea" Type="varchar" Nullable="false" MaxLength="200" />
+    <Property Name="lsa" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="sa" Type="varchar" Nullable="false" MaxLength="200" />
+  </EntityType>
+  <EntityType Name="branch_course">
+    <Key>
+      <PropertyRef Name="branch_course_id" />
+    </Key>
+    <Property Name="branch_course_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="branch_id" Type="int" Nullable="false" />
+    <Property Name="course_id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="branch_information">
+    <Key>
+      <PropertyRef Name="branch_id" />
+    </Key>
+    <Property Name="branch_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="branch" Type="varchar" Nullable="false" MaxLength="45" />
+    <Property Name="college" Type="varchar" Nullable="false" MaxLength="45" />
+    <Property Name="address" Type="varchar" Nullable="false" MaxLength="200" />
+  </EntityType>
+  <EntityType Name="course_information">
+    <Key>
+      <PropertyRef Name="course_id" />
+    </Key>
+    <Property Name="course_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="course_name" Type="varchar" Nullable="false" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="slider_information">
+    <Key>
+      <PropertyRef Name="slider_id" />
+    </Key>
+    <Property Name="slider_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="imageDirectory" Type="varchar" MaxLength="500" />
+    <Property Name="title" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="paragraph" Type="varchar" MaxLength="245" />
+    <Property Name="button" Type="varchar" MaxLength="20" />
+    <Property Name="class_name" Type="varchar" MaxLength="45" />
+    <Property Name="url" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="staff_information">
+    <Key>
+      <PropertyRef Name="staff_id" />
+    </Key>
+    <Property Name="staff_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="imageDirectory" Type="varchar" MaxLength="500" />
+    <Property Name="prefix" Type="varchar" Nullable="false" MaxLength="4" />
+    <Property Name="gender" Type="varchar" Nullable="false" MaxLength="6" />
+    <Property Name="firstname" Type="varchar" Nullable="false" MaxLength="45" />
+    <Property Name="middlename" Type="varchar" MaxLength="45" />
+    <Property Name="lastname" Type="varchar" Nullable="false" MaxLength="45" />
+    <Property Name="position" Type="varchar" Nullable="false" MaxLength="100" />
+  </EntityType>
+</Schema>

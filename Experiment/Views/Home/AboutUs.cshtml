@@ -1,0 +1,43 @@
+﻿@model Experiment.Models.Home.AboutUsModel
+
+<div id="lx_about">
+    <div class="header">
+        <table cellspacing="0">
+            <tr>
+                <td><h1>ABOUT US</h1></td>
+                <td>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    </p>
+                </td>
+            </tr>
+        </table>
+        <div class="content">
+            @if(Model.staffList.Count > 0){
+                foreach(var staff in Model.staffList){
+                    <div class="panel">
+                        <div class="image">
+                            @if(staff.imageDirectory == null){
+                                if(staff.gender.Equals("Male")){
+                                    <img src="@Url.Content("~/Content/images/male.png")" />
+                                }
+                                else{
+                                    <img src="@Url.Content("~/Content/images/female.png")" />
+                                }
+                            }
+                            else{
+                                <img src="@Url.Content(staff.imageDirectory)" />
+                            }
+                        </div>
+                        <div class="info">
+                            <h1>@staff.prefix.ToUpper() @staff.firstname.ToUpper() @staff.lastname.ToUpper()</h1>
+                            <h2>@staff.position</h2>
+                        </div>
+                    </div>
+                }
+            }
+        </div>
+    </div>
+</div>
+
+<script src="@Url.Content("~/Content/javascript/about.js")" type="text/javascript"></script>
